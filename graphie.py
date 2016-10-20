@@ -1,10 +1,19 @@
-# Try this code in Idle, change some of the numbers and see what happens
+import time
 
-#counter 
-counter = 1 
+string = input("Character to use?")
+counter = 1
+limit = int (input ("How many times to repeat?" ))
 
-# How many times do you think the loop will repeat?
-while (counter < 60):
-    print ("*" * counter, end = " \\ ") #fancy print 
-    counter  = counter + 1
-    print (counter)
+while True:  
+    
+    # going to the right
+    while (counter < limit):
+        print (string * counter)
+        counter = counter + 1
+        time.sleep(.01)
+        
+    # and back to the left  
+    while (counter > 0):
+        counter = counter - 1
+        print (string * counter)
+        time.sleep(.05)
